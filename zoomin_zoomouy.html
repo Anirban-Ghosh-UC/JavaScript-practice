@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>My Title</title>
+        <script type="text/javascript">
+         
+         var ID =0
+         var width=500
+         var diff=5
+         function start(){
+            clearInterval(ID);  
+            ID= window.setInterval(increase,1)
+            }
+
+        function stop(){
+            clearInterval(ID);  
+            ID= window.setInterval(decrease,1)
+        }
+        
+        function decrease(){
+            if(width>500){
+                width=width-diff;
+                document.getElementById("img1").style.width=width;
+            }
+            else{
+                clearInterval(ID);
+            }
+
+        }
+        function increase(){
+          
+            if(width<1000){
+                width=width+diff;
+                document.getElementById("img1").style.width=width;
+            }
+            else{
+                clearInterval(ID);
+            }
+
+        }
+
+        
+        </script>
+
+    </head>
+    <body>
+        
+        <br>
+         <img onmouseover="start()" onmouseout="stop()" src="empire.jpg" id="img1" width=500px>
+        <br>
+         
+    
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>My Title</title>
+        <script type="text/javascript">
+         
+         var ID =0
+         var seconds=0
+         function printMsg(){
+               
+                //document.getElementById("op").innerHTML="5 seconds haved passed";
+                document.getElementById("op").innerHTML=seconds + "seconds";
+                seconds++;
+               }
+   
+         function start(){
+               
+            //ID= window.setTimeout(printMsg,5000)
+            ID= window.setInterval(printMsg,1000)
+            }
+
+        function stop(){
+            document.getElementById("op").innerHTML="Some Text";    
+           //window.clearTimeout(ID);
+           window.clearInterval(ID);
+           seconds=0;
+        }
+   
+
+        
+        </script>
+
+    </head>
+    <body>
+        <button onclick="start()"id="btnadd"> Start</button>
+        <br>
+         <h3 id="op"> Some Text</h3>
+        <br>
+        <button onclick="stop()"id="btnstop"> Stop</button>
+        
+        
+        
+         
+
+    </body>
+</html>
