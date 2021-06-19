@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>My Title</title>
+        <script type="text/javascript">
+         
+         function fn1(){
+             var element =document.getElementsByClassName("mypara");
+             for(var i=0; i<element.length; i++){
+                 element[i].style.color ="red";
+             }
+            
+        }
+
+        </script>
+
+    </head>
+    <body>
+        <p class="mypara">This is para 1</p>
+        <p >This is para 1</p>
+        <p class="mypara">This is para 1</p>
+        <p >This is para 1</p>
+        <a class="mypara" href="#">This is Anchor</p>
+        
+        <br>
+        <button onclick="fn1()">Click Me</button>         
+
+    </body>
+</html>

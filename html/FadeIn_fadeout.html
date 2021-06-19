@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>My Title</title>
+        <script type="text/javascript">
+         
+         var ID =0
+         var opacity=0
+    
+         function start(){
+               
+            ID= window.setInterval(hide,90)
+            }
+
+        function stop(){
+            ID= window.setInterval(show,90)
+        }
+        
+        function hide(){
+            var img=document.getElementById("img1")
+            opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+
+            if(opacity>0){
+                opacity=opacity-0.1;
+                img.style.opacity=opacity;
+            }
+            else{
+                clearInterval(ID);
+            }
+
+        }
+        function show(){
+            var img=document.getElementById("img1")
+            opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+
+            if(opacity<1){
+                opacity=opacity+0.1;
+                img.style.opacity=opacity;
+            }
+            else{
+                clearInterval(ID);
+            }
+
+        }
+
+        
+        </script>
+
+    </head>
+    <body>
+        <button onclick="start()"id="btnadd"> Fade out</button>
+        <br>
+         <img src="empire.jpg" id="img1" width=500px>
+        <br>
+        <button onclick="stop()"id="btnstop"> Fade In</button>
+    
+    </body>
+</html>

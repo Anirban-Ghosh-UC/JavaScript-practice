@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>My Title</title>
+        <script type="text/javascript">
+         
+         function validate(){
+               var text = document.getElementById("text1").value;
+               var regx=/^([a-z 0-9\.-]+)@([a-z 0-9 -]).([a-z{2,8}])(.[a-z]{2,8})$/;
+                
+
+            if (regx.test(text)==true)
+               {
+                document.getElementById("lbuser").innerHTML="Valid";
+                document.getElementById("lbuser").style.visibility="visible";
+                document.getElementById("lbuser").style.color="green";
+                  
+               }
+            else{
+                document.getElementById("lbuser").innerHTML="Invalid";
+                document.getElementById("lbuser").style.visibility="visible";
+                document.getElementById("lbuser").style.color="red";
+               }
+
+
+            }
+
+        
+        </script>
+
+    </head>
+    <body>
+         
+        <input id="text1" type="text" placeholder="Email">
+        <br>
+        <label id="lbuser" style="color:red; visibility:hidden">Invalid</label>
+        <br>
+        
+        <button onclick="validate()"type="button"> Submit</button>
+        
+        
+        
+         
+
+    </body>
+</html>
